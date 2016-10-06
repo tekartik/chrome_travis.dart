@@ -1,0 +1,11 @@
+name: chrome_travis
+author: Alexandre Roux <alex@tekartik.com>
+version: 0.1.2
+dependencies:
+  process_run: any
+dev_dependencies:
+  test: any
+  dev_test: any
+
+executables:
+  chrome_setup:
