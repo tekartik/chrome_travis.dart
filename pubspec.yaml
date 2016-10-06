@@ -7,5 +7,5 @@ dev_dependencies:
   test: any
   dev_test: any
 
-executables:
-  chrome_setup:
+#executables:
+#  chrome_setup:
