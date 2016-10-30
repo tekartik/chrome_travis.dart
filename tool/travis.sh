@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# for debugging
 pub run chrome_travis:show_env
 
 # Test on purpose separately to see which platform fails
