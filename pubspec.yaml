@@ -1,6 +1,7 @@
 name: chrome_travis
 author: Alexandre Roux <alex@tekartik.com>
 homepage: https://github.com/tekartik/chrome_travis.dart
+description: travis-ci scripts for chrome
 version: 0.1.3
 dependencies:
   path: '>=1.3.9'

@@ -14,11 +14,11 @@ main(List<String> args) async {
       abbr: 'v', help: 'Display content in stderr', negatable: false);
 
   ArgResults results = parser.parse(args);
-  if (results['help']) {
+  if (results['help'] as bool) {
     stderr.writeln(parser.usage);
     return;
   }
-  bool verbose = results['verbose'];
+  bool verbose = results['verbose'] as bool;
 
   String content = r"""
 export CHROME_BIN=/usr/bin/google-chrome
