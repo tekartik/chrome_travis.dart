@@ -13,6 +13,8 @@ dependencies:
 dev_dependencies:
   test: any
   dev_test: any
+  build_test: any
+  build_runner: any
 
 executables:
   env_rc:
