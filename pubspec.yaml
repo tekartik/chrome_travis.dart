@@ -4,7 +4,7 @@ homepage: https://github.com/tekartik/chrome_travis.dart
 description: travis-ci scripts for chrome
 version: 0.1.4
 environment:
-  sdk: '>=2.0.0-dev.63 <2.0.0'
+  sdk: '>=2.0.0-dev.58 <3.0.0'
 
 dependencies:
   path: '>=1.6.0'
