@@ -15,7 +15,3 @@ dev_dependencies:
   dev_test: any
   build_test: any
   build_runner: any
-
-executables:
-  env_rc:
-  show_env:
