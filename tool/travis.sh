@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -xe
+
 # for debugging
 pub run chrome_travis:show_env
 
