@@ -2,16 +2,17 @@ name: chrome_travis
 author: Alexandre Roux <alex@tekartik.com>
 homepage: https://github.com/tekartik/chrome_travis.dart
 description: travis-ci scripts for chrome
-version: 0.1.4
+version: 0.2.0
 environment:
-  sdk: '>=2.0.0-dev.58 <3.0.0'
+  sdk: '>=2.5.0 <3.0.0'
 
 dependencies:
   path: '>=1.6.0'
-  process_run: '>=0.6.0-dev.1'
+  process_run: '>=0.10.3'
   args: '>=1.4.3'
 dev_dependencies:
   test: any
   dev_test: any
   build_test: any
   build_runner: any
+  pedantic:
