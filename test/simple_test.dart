@@ -1,6 +1,6 @@
 import 'package:dev_test/test.dart';
 
-main() {
+void main() {
   group('all', () {
     test('simple', () {
       expect(true, isTrue);
