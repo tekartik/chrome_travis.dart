@@ -5,8 +5,12 @@ import 'package:path/path.dart';
 
 const String envRc = 'env.rc';
 
+/// Try travis temp dir first
+String get travisTempDir =>
+    Platform.environment['TRAVIS_TMPDIR'] ?? Directory.systemTemp.path;
+
 Future main(List<String> args) async {
-  final tempDir = await Directory.systemTemp.createTemp();
+  final tempDir = await Directory(travisTempDir).createTemp();
 
   final parser = ArgParser(allowTrailingOptions: true);
   parser.addFlag('help', abbr: 'h', help: 'Usage help', negatable: false);
@@ -20,6 +24,7 @@ Future main(List<String> args) async {
   }
   final verbose = results['verbose'] as bool;
 
+  final dst = File(join(tempDir.path, envRc));
   final content = r'''
 export CHROME_BIN=/usr/bin/google-chrome
 export DISPLAY=:99.0
@@ -31,10 +36,13 @@ sudo dpkg -i google-chrome*.deb
 t=0; until (xdpyinfo -display :99 &> /dev/null || test $t -gt 10); do sleep 1; let t=$t+1; done
 ''';
   if (verbose) {
-    stderr.writeln(content);
+    stderr.writeln('path: $dst');
+    stderr.writeln('content:\n$content');
   }
-
-  final dst = File(join(tempDir.path, envRc));
-  await dst.writeAsString(content);
-  stdout.write(dst.path);
+  try {
+    await dst.writeAsString(content);
+    stdout.write(dst.path);
+  } catch (e) {
+    stderr.writeln('Failed to write to $dst');
+  }
 }
