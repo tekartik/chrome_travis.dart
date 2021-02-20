@@ -26,6 +26,10 @@ Future main(List<String> args) async {
 
   final dst = File(join(tempDir.path, envRc));
   final content = r'''
+# Also make firefox headless, not related but convenient
+export MOZ_HEADLESS=1
+
+# Chrome setup
 export CHROME_BIN=/usr/bin/google-chrome
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
