@@ -1,5 +1,6 @@
 import 'package:dev_test/package.dart';
 import 'package:process_run/shell.dart';
+
 Future<void> main() async {
   final shell = Shell();
 
@@ -8,5 +9,4 @@ Future<void> main() async {
 pub run chrome_travis:show_env
 ''');
   await packageRunCi('.');
-
 }
