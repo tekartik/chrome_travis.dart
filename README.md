@@ -13,8 +13,8 @@ dev_dependencies:
   test: any
   chrome_travis:
     git: 
-      url: git://github.com/tekartik/chrome_travis.dart
-      ref: dart2
+      url: https://github.com/tekartik/chrome_travis.dart
+      ref: dart2_3
 ```
 
 Create the following `.travis.yml` file
