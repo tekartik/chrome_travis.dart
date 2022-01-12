@@ -4,6 +4,8 @@ Travis helper scripts to allow running unit test on Chrome
 
 ## Setup
 
+[Note about versioning.](https://github.com/tekartik/common.dart/blob/main/doc/tekartik_versioning.md)
+
 This assumes you are familiar with Dart and Travis integration
 
 Include `chrome_travis.dart` as a development dependencies in your `pubspec.yaml` file
