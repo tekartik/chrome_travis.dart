@@ -6,7 +6,7 @@ Future<void> main() async {
 
   await shell.run('''
 # for info
-pub run chrome_travis:show_env
+dart pub run chrome_travis:show_env
 ''');
   await packageRunCi('.');
 }

@@ -3,5 +3,5 @@
 import 'package:process_run/shell_run.dart';
 
 Future main() async {
-  await run('pub run chrome_travis:env_rc -h', verbose: false);
+  await run('dart pub run chrome_travis:env_rc -h', verbose: false);
 }
