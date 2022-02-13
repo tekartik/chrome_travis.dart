@@ -29,9 +29,9 @@ dart:
   - stable
   - dev
 before_script:
- - source $(pub run chrome_travis:env_rc)
+ - source $(dart pub run chrome_travis:env_rc)
 script:
- - pub run test -p vm -p chrome
+ - dart pub run test -p vm -p chrome
 ```
 
 Configure your project to run in https://travis-ci.org
