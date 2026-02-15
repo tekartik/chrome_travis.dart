@@ -14,8 +14,12 @@ Future main(List<String> args) async {
 
   final parser = ArgParser(allowTrailingOptions: true);
   parser.addFlag('help', abbr: 'h', help: 'Usage help', negatable: false);
-  parser.addFlag('verbose',
-      abbr: 'v', help: 'Display content in stderr', negatable: false);
+  parser.addFlag(
+    'verbose',
+    abbr: 'v',
+    help: 'Display content in stderr',
+    negatable: false,
+  );
 
   final results = parser.parse(args);
   if (results['help'] as bool) {
