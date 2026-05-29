@@ -13,5 +13,5 @@ Future main() async {
   info['vars'] = Map.of(ShellEnvironment().vars);
   info['paths'] = List.of(ShellEnvironment().paths);
   info['aliases'] = Map.of(ShellEnvironment().aliases);
-  print(const JsonEncoder.withIndent('  ').convert(info));
+  stdout.writeln(const JsonEncoder.withIndent('  ').convert(info));
 }
