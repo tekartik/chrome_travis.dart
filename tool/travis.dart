@@ -5,16 +5,16 @@ Future<void> main() async {
 
   await shell.run('''
 # Analyze code
-dartanalyzer --fatal-warnings --fatal-infos .
-dartfmt -n --set-exit-if-changed .
+dart analyze --fatal-warnings --fatal-infos .
+dart format --output=none --set-exit-if-changed .
 
 # for debugging
-dart pub run chrome_travis:show_env
+dart run chrome_travis:show_env
 
 # Test on purpose separately to see which platform fails
-dart pub run test -p vm -r expanded
-dart pub run test -p firefox -r expanded
-dart pub run test -p chrome -r expanded
+dart test -p vm -r expanded
+dart test -p firefox -r expanded
+dart test -p chrome -r expanded
 
 ''');
 }
